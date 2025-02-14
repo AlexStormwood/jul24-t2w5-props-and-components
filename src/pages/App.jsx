@@ -12,12 +12,31 @@ import LogoDisplayComponent from '../components/LogoDisplayComponent';
 function App() {
   const [count, setCount] = useState(0)
 
+  let darkModeStyleObject = {
+    backgroundColor: "black",
+    color: "white"
+  }
+
+  let lightModeStyleObject = {
+    backgroundColor: "white",
+    color: "black"
+  }
+
+  let userTheme = "dark";
+
   return (
     <>
       <LogosComponent />
       <LogoDisplayComponent url="https://vite.dev" logo={viteLogo} altText="Vite logo"  />
       <LogoDisplayComponent url="https://react.dev" logo={reactLogo} altText="React logo"  />
-      <h1>Vite + React</h1>
+
+      <h1 
+        className={userTheme == "dark" ? "darkHeading" : "lightHeading"}
+        style={userTheme == "dark" ? darkModeStyleObject : lightModeStyleObject}
+      >
+        Vite + React
+      </h1>
+
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
