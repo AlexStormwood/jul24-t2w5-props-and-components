@@ -9,6 +9,7 @@ import '../styles/App.css';
 import LogosComponent from '../components/Logos';
 import LogoDisplayComponent from '../components/LogoDisplayComponent';
 import CounterComponent from '../components/CounterComponent';
+import RandomPokemonComponent from '../components/RandomPokemonComponent';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +28,9 @@ function App() {
 
   return (
     <>
+
+      <RandomPokemonComponent />
+
       <LogosComponent />
       <LogoDisplayComponent url="https://vite.dev" logo={viteLogo} altText="Vite logo"  />
       <LogoDisplayComponent url="https://react.dev" logo={reactLogo} altText="React logo"  />
