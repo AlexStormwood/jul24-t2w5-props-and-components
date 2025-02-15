@@ -8,6 +8,7 @@ import viteLogo from '/vite.svg'
 import '../styles/App.css';
 import LogosComponent from '../components/Logos';
 import LogoDisplayComponent from '../components/LogoDisplayComponent';
+import CounterComponent from '../components/CounterComponent';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,14 +38,15 @@ function App() {
         Vite + React
       </h1>
 
-      <div className="card">
+      {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
-      </div>
+      </div> */}
+      <CounterComponent />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
